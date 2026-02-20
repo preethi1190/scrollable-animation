@@ -6,243 +6,123 @@
 <title>R.K. Preethi | Portfolio</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: black;
+        height: 400vh; /* Important for scrolling */
+    }
 
-body{
-    background:#ffffff;
-    color:#111;
-    overflow-x:hidden;
-}
+    /* Canvas Background */
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        opacity: 0.6; /* Increase for more visibility */
+    }
 
-/* ===== Scroll Animation Canvas ===== */
-#animationCanvas{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
-    opacity:0.08; /* Watermark transparency */
-}
+    /* Light transparent content box */
+    .content {
+        position: relative;
+        z-index: 2;
+        width: 70%;
+        margin: auto;
+        padding: 80px 40px;
+        margin-top: 100px;
+        background: rgba(255, 255, 255, 0.75); /* Transparent */
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+    }
 
-/* ===== Main Content ===== */
-.container{
-    width:85%;
-    max-width:1100px;
-    margin:auto;
-    padding:80px 0;
-}
+    h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
 
-section{
-    margin-bottom:80px;
-}
+    h2 {
+        margin-top: 50px;
+        border-left: 5px solid #0077ff;
+        padding-left: 10px;
+    }
 
-h1{
-    font-size:42px;
-    font-weight:700;
-    letter-spacing:2px;
-    margin-bottom:10px;
-}
-
-h2{
-    font-size:26px;
-    margin-bottom:20px;
-    border-left:5px solid #0077ff;
-    padding-left:12px;
-}
-
-h3{
-    font-size:20px;
-    margin-bottom:8px;
-}
-
-p{
-    line-height:1.6;
-    font-size:16px;
-}
-
-.contact p{
-    margin-bottom:6px;
-}
-
-.skills ul,
-.languages ul{
-    list-style:none;
-}
-
-.skills li,
-.languages li{
-    padding:6px 0;
-    font-size:16px;
-}
-
-.project{
-    margin-bottom:25px;
-}
-
-.education-item{
-    margin-bottom:20px;
-}
-
-.highlight{
-    color:#0077ff;
-    font-weight:600;
-}
-
-.footer{
-    text-align:center;
-    padding:40px 0;
-    font-size:14px;
-    color:#666;
-}
-
-@media(max-width:768px){
-    h1{font-size:32px;}
-    h2{font-size:22px;}
-}
+    p {
+        line-height: 1.6;
+    }
 </style>
 </head>
 
 <body>
 
-<canvas id="animationCanvas"></canvas>
+<canvas id="canvas"></canvas>
 
-<div class="container">
-
-<section>
+<div class="content">
     <h1>R.K. PREETHI</h1>
-    <div class="contact">
-        <p>📍 New Colony, N.K.Road, Thanjavur</p>
-        <p>📞 +91 9342173108</p>
-        <p>✉️ ravipreethi681@gmail.com</p>
-    </div>
-</section>
+    <p>📍 New Colony, N.K. Road, Thanjavur</p>
+    <p>📞 +91 9342173108</p>
+    <p>✉️ ravipreethi681@gmail.com</p>
 
-<section>
     <h2>Objective</h2>
     <p>
-        Beginner programmer seeking a coding and web development internship to apply my technical skills,
-        learn from real-world projects and gain industry experience.
+        Beginner programmer seeking a coding and web development internship 
+        to apply my technical skills and grow professionally.
     </p>
-</section>
 
-<section>
     <h2>Education</h2>
+    <p>B.E. in Electronics and Communication Engineering</p>
 
-    <div class="education-item">
-        <h3>Government College of Engineering, Tirunelveli</h3>
-        <p class="highlight">B.E. Electronics and Communication Engineering</p>
-        <p>CGPA: 7.79 | 3rd Year (2023)</p>
-    </div>
+    <h2>Skills</h2>
+    <p>HTML, CSS, JavaScript, Python, Embedded Systems</p>
 
-    <div class="education-item">
-        <h3>Little Scholars Matriculation Higher Secondary School, Tirunelveli</h3>
-        <p class="highlight">12th Grade</p>
-        <p>Percentage: 86%</p>
-    </div>
-</section>
-
-<section class="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-        <li>✔ Beginner in C and C++</li>
-        <li>✔ Python</li>
-        <li>✔ Web Development</li>
-    </ul>
-</section>
-
-<section>
     <h2>Projects</h2>
-
-    <div class="project">
-        <h3>Smart Irrigation System</h3>
-        <p>
-            A system that provides water to plants automatically when soil is dry 
-            using a moisture sensor and DC motor.
-        </p>
-    </div>
-
-    <div class="project">
-        <h3>IoT Based Air Monitoring System</h3>
-        <p>
-            An IoT-based system that monitors air quality using humidity 
-            and temperature sensors.
-        </p>
-    </div>
-</section>
-
-<section class="languages">
-    <h2>Languages Known</h2>
-    <ul>
-        <li>Tamil</li>
-        <li>English</li>
-        <li>Hindi (Beginner)</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Certification</h2>
-    <p>
-        Completed Foundation Course on IR4.0 Technologies under 
-        TechSaksham, implemented by Edunet Foundation.
-    </p>
-</section>
-
-<div class="footer">
-    © 2026 R.K. Preethi | Portfolio
-</div>
-
+    <p>Scrollable frame animation portfolio website</p>
 </div>
 
 <script>
-// ===== Scroll Controlled Frame Animation =====
-
-const canvas = document.getElementById("animationCanvas");
+const frameCount = 240;
+const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const frameCount = 240;
+const currentFrame = index => 
+  `frames/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
+
 const images = [];
-const imageSeq = (frame) =>
-  `frames/ezgif-frame-${frame.toString().padStart(3, '0')}.jpg`;
+const image = new Image();
 
 for (let i = 1; i <= frameCount; i++) {
     const img = new Image();
-    img.src = imageSeq(i);
+    img.src = currentFrame(i);
     images.push(img);
 }
 
-let currentFrame = 0;
+image.src = currentFrame(1);
 
-function render() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(images[currentFrame], 0, 0, canvas.width, canvas.height);
-}
+image.onload = function() {
+    context.drawImage(image, 0, 0, canvas.width, canvas.height);
+};
 
-images[0].onload = render;
-
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
     const scrollTop = document.documentElement.scrollTop;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const scrollFraction = scrollTop / maxScroll;
-    currentFrame = Math.min(
+    const frameIndex = Math.min(
         frameCount - 1,
         Math.floor(scrollFraction * frameCount)
     );
-    render();
+
+    requestAnimationFrame(() => {
+        context.drawImage(images[frameIndex], 0, 0, canvas.width, canvas.height);
+    });
 });
 
-window.addEventListener("resize", () => {
+window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    render();
 });
 </script>
 
